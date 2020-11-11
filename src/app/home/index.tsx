@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import reducer from '@/store/home/reducer'
 import { edit } from '@/store/home/action'
 import mixin, { sayName } from '@/utils/mixin'
+import './index.scss'
 
 @mixin({ sayName })
 class Home extends React.Component<RouteComponentProps | any, {}> {
