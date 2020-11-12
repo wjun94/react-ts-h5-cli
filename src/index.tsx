@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import 'antd/dist/antd.css'
 import App from './App';
-import { ConfigProvider } from 'antd';
-import zhCN from 'antd/es/locale/zh_CN';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import store from './store/store'
@@ -13,11 +10,9 @@ import 'lib-flexible'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ConfigProvider locale={zhCN}>
       <Provider store={store}>
         <App />
       </Provider>
-    </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
