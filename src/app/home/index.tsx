@@ -8,6 +8,11 @@ import './index.scss'
 
 @mixin({ sayName })
 class Home extends React.Component<RouteComponentProps | any, {}> {
+    async componentDidMount() {
+        const result = await window.$api.advtgList()
+        console.log(result)
+    }
+
     back = () => {
         this.props.history.goBack()
     }

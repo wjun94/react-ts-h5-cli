@@ -7,6 +7,19 @@ import reportWebVitals from './reportWebVitals';
 import store from './store/store'
 import { Provider } from 'react-redux'
 import 'lib-flexible'
+import Api from '@/api'
+import * as Utils from '@/utils'
+import './mock'
+
+declare global {
+  interface Window {
+    $api: any;
+    $utils: any
+  }
+}
+
+window.$api = Api
+window.$utils = Utils
 
 ReactDOM.render(
   <React.StrictMode>
